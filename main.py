@@ -57,7 +57,6 @@ def display_rows():
         end_index = min(start_index + 10, len(data))
         subset_data = data.loc[start_index:end_index - 1, ['Youtuber', 'category', 'Title', 'Country', 'Abbreviation', 'channel_type', 'rank', 'subscribers', 'video_views_rank']]
         data_text = "Dataset:\n" + subset_data.to_string(index=False)
-        
 
 from scipy.stats import gaussian_kde
 
@@ -96,12 +95,16 @@ def visualize_scatter():
 
 def visualize_violin():
     if data is not None:
-        plt.figure(figsize=(8, 6))
+        num_categories = len(data['category'].unique())
+        fig_width = min(12, num_categories * 0.8)  # Adjust the width based on the number of categories
+        fig_height = min(8, num_categories * 0.6)
+        plt.figure(figsize=(fig_width, fig_height))
         sns.violinplot(x='category', y='subscribers', data=data)
         plt.title('Violin Plot of Subscribers by Category')
-        plt.xlabel('Category')
+        plt.xlabel('Category', fontsize=12)  # Adjust font size of category labels
         plt.ylabel('Subscribers')
-        plt.xticks(rotation=45)
+        plt.xticks(rotation=45, ha='right')  # Rotate and align category labels
+        plt.tight_layout()  # Ensure tight layout to prevent clipping
         plt.show()
 
 # Create the main application window
