@@ -11,18 +11,24 @@ To run the code in this repository, follow these steps:
 
 1. Clone this repository to your local machine:
 
-git clone https://github.com/egbunujosh/data-analysis-assignment.git
 
+```
+  git clone https://github.com/egbunujosh/data-analysis-assignment.git
+  ```
 
 
 2. Navigate to the project directory:
 
-cd data-analysis-assignment
 
+```
+  cd data-analysis-assignment
+  ```
 
 3. Install the required dependencies:
-pip install -r requirements.txt
 
+```
+  pip install -r requirements.txt
+  ```
 
 
 4. Run the main Python script:
