@@ -26,8 +26,10 @@ pip install -r requirements.txt
 
 
 4. Run the main Python script:
-python main.py
 
+```
+  python main.py
+  ```
 
 ## Usage
 
@@ -37,10 +39,6 @@ After running the main script, you can interact with the graphical user interfac
 
 - Egbunu Joshua Ukwubile
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Feel free to modify and extend the code according to your needs!
 
 
